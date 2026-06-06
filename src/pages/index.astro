@@ -1,30 +1,319 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import '../styles/global.css';
 ---
+<Layout>
+  <Nav />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Rokugenya</title>
-		<style>
-			body {
-				margin: 0;
-				font-family: system-ui, sans-serif;
-			}
+  <!-- ── HERO ──────────────────────────────── -->
+  <section class="hero">
+    <p class="hero__eyebrow">New York City &mdash; Omakase</p>
+    <h1 class="hero__title">Rokugen Ya</h1>
+    <p class="hero__subtitle">Ten seats &mdash; Two seatings &mdash; One experience</p>
+    <a href="#reservations" class="hero__cta">Reserve a Seat</a>
+    <span class="hero__scroll" aria-hidden="true">Scroll</span>
+  </section>
 
-			main {
-				display: grid;
-				min-height: 100vh;
-				place-items: center;
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<h1>Rokugenya &mdash; Coming Soon</h1>
-		</main>
-	</body>
-</html>
+  <!-- ── CONCEPT ───────────────────────────── -->
+  <section id="about" class="concept">
+    <div class="container">
+      <div class="concept__inner">
+        <div class="concept__text">
+          <span class="label">Our Philosophy</span>
+          <h2 class="concept__heading">
+            The art of restraint.<br />The warmth of presence.
+          </h2>
+          <div class="concept__body">
+            <p>
+              Rokugen Ya was born from a single conviction: that the finest meal
+              is not measured in courses, but in moments of stillness. Seated at
+              our hinoki wood counter, you are not a guest in a restaurant —
+              you are a guest in our home.
+            </p>
+            <p>
+              Each evening we prepare a single menu, composed around what arrived
+              from the market that morning. No substitutions, no shortcuts, no
+              distraction. Only the chef, the fish, and you.
+            </p>
+          </div>
+        </div>
+        <div class="concept__image" role="img" aria-label="Nigiri sushi on a ceramic plate"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ────────────────────────── -->
+  <section class="experience">
+    <div class="container">
+      <div class="experience__inner">
+        <div class="experience__media" aria-hidden="true">
+          <div class="exp-img exp-img--main"></div>
+          <div class="exp-img exp-img--a"></div>
+          <div class="exp-img exp-img--b"></div>
+        </div>
+        <div class="experience__text">
+          <span class="label label--light">The Counter</span>
+          <h2 class="experience__heading">
+            Intimate by design.<br />Unhurried by intention.
+          </h2>
+          <div class="experience__body">
+            <p>
+              Ten seats wrap a single L-shaped counter of aged hinoki cypress.
+              There are no tables, no private rooms — only the quiet theater
+              of the chef at work, inches from where you sit.
+            </p>
+            <p>
+              The ritual unfolds across eighteen to twenty courses over
+              approximately two and a half hours. We ask only that you arrive
+              present, and leave when you are ready.
+            </p>
+          </div>
+          <div class="experience__stats">
+            <div>
+              <span class="stat__number">10</span>
+              <span class="stat__label">Seats</span>
+            </div>
+            <div>
+              <span class="stat__number">2</span>
+              <span class="stat__label">Seatings nightly</span>
+            </div>
+            <div>
+              <span class="stat__number">~20</span>
+              <span class="stat__label">Courses</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MENU ──────────────────────────────── -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <div class="menu__inner">
+        <span class="label">The Menu</span>
+        <h2 class="menu__heading">Seasonal Omakase</h2>
+        <p class="menu__season">— Spring, 2025 —</p>
+        <p class="menu__description">
+          Our menu changes with the seasons and reflects what is finest on any
+          given night. The following is a representative progression; the
+          precise composition varies with the market.
+        </p>
+
+        <div class="menu__courses">
+          <div class="menu__course">
+            <span class="course__name">Sakizuke <span class="course__note">Amuse</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Otsukuri <span class="course__note">Sashimi selection</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Yakimono <span class="course__note">Chef's grilled preparation</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Nigiri <span class="course__note">Ten to twelve pieces, seasonal fish</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Maki <span class="course__note">Hand-rolled tuna</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Tamago <span class="course__note">House egg custard</span></span>
+          </div>
+          <div class="menu__course">
+            <span class="course__name">Mizugashi <span class="course__note">Seasonal sweet</span></span>
+          </div>
+        </div>
+
+        <p class="menu__price">$285</p>
+        <span class="menu__price-note">Per person &mdash; Beverages available separately</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESERVATIONS ──────────────────────── -->
+  <section id="reservations" class="reservations">
+    <div class="reservations__inner">
+      <span class="label label--light reservations__label">Reservations</span>
+      <h2 class="reservations__heading">Join Us</h2>
+      <p class="reservations__body">
+        Reservations open thirty days in advance. Full payment is collected at
+        the time of booking and is non-refundable within 48 hours of your
+        seating. Guests are asked to arrive within ten minutes of their
+        reserved time.
+      </p>
+
+      <div class="reservations__seatings">
+        <div class="seating">
+          <span class="seating__time">6:00 PM</span>
+          <span class="seating__label">First seating</span>
+        </div>
+        <div class="seating">
+          <span class="seating__time">8:45 PM</span>
+          <span class="seating__label">Second seating</span>
+        </div>
+      </div>
+
+      <a href="#" class="btn btn--light">Book via Tock</a>
+    </div>
+  </section>
+
+  <!-- ── PRESS ─────────────────────────────── -->
+  <section class="press">
+    <div class="container">
+      <div class="press__inner">
+        <span class="label">Recognition</span>
+        <div class="press__grid">
+          <div class="press__item">
+            <p class="press__quote">
+              &ldquo;A counter so serene it redefines what a meal can be.&rdquo;
+            </p>
+            <span class="press__publication">The New York Times</span>
+          </div>
+          <div class="press__item">
+            <p class="press__quote">
+              &ldquo;Among the most considered omakase experiences in the city.&rdquo;
+            </p>
+            <span class="press__publication">Eater New York</span>
+          </div>
+          <div class="press__item">
+            <p class="press__quote">
+              &ldquo;Every course a quiet revelation.&rdquo;
+            </p>
+            <span class="press__publication">New York Magazine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────── -->
+  <section class="faq">
+    <div class="container">
+      <div class="faq__inner">
+        <span class="label">Common Questions</span>
+
+        <div class="faq__item">
+          <p class="faq__q">Is there a dress code?</p>
+          <p class="faq__a">
+            We ask guests to dress in a manner that feels appropriate for an
+            intimate, special evening. Business casual or above is appreciated.
+            We do not permit athletic wear or overly casual attire.
+          </p>
+        </div>
+
+        <div class="faq__item">
+          <p class="faq__q">Can you accommodate dietary restrictions?</p>
+          <p class="faq__a">
+            Because our menu is highly curated and changes nightly, we are
+            unable to accommodate substitutions or modifications. We are
+            unfortunately not able to serve guests with shellfish or finfish
+            allergies. Please contact us prior to booking with any concerns.
+          </p>
+        </div>
+
+        <div class="faq__item">
+          <p class="faq__q">What is your cancellation policy?</p>
+          <p class="faq__a">
+            Reservations are fully refundable up to 72 hours before your
+            seating. Within 72 hours, a 50% cancellation fee applies.
+            Cancellations within 48 hours or no-shows are charged in full.
+          </p>
+        </div>
+
+        <div class="faq__item">
+          <p class="faq__q">Do you offer a beverage pairing?</p>
+          <p class="faq__a">
+            Yes. We offer a curated sake pairing ($95) and a wine pairing
+            ($110), both composed to complement the evening's progression.
+            A selection of individual sakes, wines, and non-alcoholic
+            beverages is also available.
+          </p>
+        </div>
+
+        <div class="faq__item">
+          <p class="faq__q">Is the restaurant accessible?</p>
+          <p class="faq__a">
+            Our entrance is step-free and the counter is accessible to
+            wheelchair users. Please note us of any accessibility requirements
+            at the time of booking and we will do our best to accommodate you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────── -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact__inner">
+
+        <div class="contact__group">
+          <span class="label label--light">Visit</span>
+          <div class="contact__detail">
+            <p>123 West 18th Street</p>
+            <p>New York, NY 10011</p>
+            <br />
+            <p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener">
+                View on Map &rarr;
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact__group">
+          <span class="label label--light">Hours</span>
+          <div class="contact__detail">
+            <p>Wednesday &ndash; Sunday</p>
+            <p>First seating &nbsp;&nbsp; 6:00 PM</p>
+            <p>Second seating &nbsp; 8:45 PM</p>
+            <br />
+            <p>Closed Monday &amp; Tuesday</p>
+          </div>
+        </div>
+
+        <div class="contact__group">
+          <span class="label label--light">Contact</span>
+          <div class="contact__detail">
+            <p>
+              <a href="mailto:hello@rokugenya.com">hello@rokugenya.com</a>
+            </p>
+            <br />
+            <p>For private events and inquiries, please email us directly.</p>
+            <br />
+            <p>
+              <a href="https://instagram.com" target="_blank" rel="noopener">
+                @rokugenya
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────── -->
+  <footer class="footer">
+    <span class="footer__logo">Rokugen Ya</span>
+    <span class="footer__copy">&copy; 2025 Rokugen Ya. All rights reserved.</span>
+    <nav class="footer__social" aria-label="Social links">
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@rokugenya.com">Email</a>
+    </nav>
+  </footer>
+
+</Layout>
+
+<!-- ── FAQ accordion ──────────────────────────── -->
+<script>
+  document.querySelectorAll<HTMLElement>('.faq__item').forEach(item => {
+    const q = item.querySelector<HTMLElement>('.faq__q');
+    q?.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
